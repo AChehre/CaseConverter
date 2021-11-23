@@ -4,4 +4,4 @@
 This is a simple visual studio extension. It converts a selected text between snake_case, camelCase and PascalCase.
 
 ## Getting Started
-See [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=munyabe.CaseConverter) for additional info on how to use this extension.
+See [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=achehre.CaseConverter2022) for additional info on how to use this extension.
