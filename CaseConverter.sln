@@ -17,6 +17,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaseConverter2022", "src\Ca
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		src\CaseConverterShared\CaseConverterShared.projitems*{664e8280-457a-4177-87e9-96b0dce7bec1}*SharedItemsImports = 4
 		src\CaseConverterShared\CaseConverterShared.projitems*{7a754992-ea1c-4717-a4bb-22104f6b998d}*SharedItemsImports = 13
 		src\CaseConverterShared\CaseConverterShared.projitems*{ed7f75ab-9c37-425b-96f1-4f7e6e9b5c0b}*SharedItemsImports = 4
 	EndGlobalSection
