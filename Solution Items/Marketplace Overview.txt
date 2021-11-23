@@ -7,7 +7,7 @@ The default settings are as follows.
 
 If the shortcut is not registered, please set it as "TOOLS" -> "Options" -> "Environment" -> "Keyboard".
 The command name is "Edit.ConvertCase".
-This is a following toggle key.
+This is the following toggle key.
 
 snake_case → camelCase → PascalCase → snake_case...
 
@@ -32,19 +32,19 @@ You can change the option in "Tools" -> "Options" -> "Case Converter". If you wa
 - v2.3
 - - Support Visual Studio 2019.
 - v2.2
-- - Fix a bug that it is not working with VS2015 or earlier.
+- - Fix a bug that is not working with VS2015 or earlier.
 - v2.1
 - - Support Visual Studio 2017.
-- - (Support Visual Studio 2010 has ended. For the 2010 version, please use the v2.0 in Github.)
+- - (Support Visual Studio 2010 has ended. For the 2010 version, please use v2.0 in Github.)
 - v2.0
 - - Add an option to change word cases and order the conversion pattern.
 - - Support Pascal_Snake_Case, SCREAMING_SNAKE_CASE, kebab-case.
 - v1.3
-- - Change the behavior to detect the word underneath cursor when nothing is selected.
+- - Change the behavior to detect the word underneath the cursor when nothing is selected.
 - v1.2
 - - Change the menu placement.
 - - Fix bug that the selected text is empty.
 - v1.1
-- - Fix bug that it doesn't work when VS2015 is not installed.
+- - Fix bug that doesn't work when VS2015 is not installed.
 - v1.0
-- - Initial release !
+- - Initial release!
