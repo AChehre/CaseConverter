@@ -1,0 +1,50 @@
+Case Converter is a simple visual studio extension. It converts a selected text between snake_case, camelCase and PascalCase. Click the context menu "Convert Case" or the following shortcut in a source code window, you can convert to different cases.
+
+## Key Bindings
+The default settings are as follows.
+
+- Convert Case: Ctrl + Shift + K, Ctrl + Shift + C
+
+If the shortcut is not registered, please set it as "TOOLS" -> "Options" -> "Environment" -> "Keyboard".
+The command name is "Edit.ConvertCase".
+This is a following toggle key.
+
+snake_case → camelCase → PascalCase → snake_case...
+
+When a selected text is included some signs or separated words, this is converted to any case.
+
+## Menu Placement
+
+- "Edit" -> "Advances" -> "Convert Case"
+
+![menu_placement.png](menu_placement.png)
+
+## Options
+You can change the option in "Tools" -> "Options" -> "Case Converter". If you want to change word cases and order the conversion pattern, set this option.
+
+![options_top.png](options_top.png)
+
+![options_pattern.png](options_pattern.png)
+
+## Change Log
+- v2.3
+- - Support Visual Studio 2022.
+- v2.3
+- - Support Visual Studio 2019.
+- v2.2
+- - Fix a bug that it is not working with VS2015 or earlier.
+- v2.1
+- - Support Visual Studio 2017.
+- - (Support Visual Studio 2010 has ended. For the 2010 version, please use the v2.0 in Github.)
+- v2.0
+- - Add an option to change word cases and order the conversion pattern.
+- - Support Pascal_Snake_Case, SCREAMING_SNAKE_CASE, kebab-case.
+- v1.3
+- - Change the behavior to detect the word underneath cursor when nothing is selected.
+- v1.2
+- - Change the menu placement.
+- - Fix bug that the selected text is empty.
+- v1.1
+- - Fix bug that it doesn't work when VS2015 is not installed.
+- v1.0
+- - Initial release !
