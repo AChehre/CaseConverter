@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Runtime.InteropServices;
+using System.Threading;
+using System.Threading.Tasks;
 using CaseConverter.Options;
 using Microsoft.VisualStudio.Shell;
 
@@ -8,13 +10,13 @@ namespace CaseConverter
     /// <summary>
     /// 拡張機能として配置されるパッケージです。
     /// </summary>
-    [PackageRegistration(UseManagedResourcesOnly = true)]
+    [PackageRegistration(UseManagedResourcesOnly = true, AllowsBackgroundLoading = true)]
     [InstalledProductRegistration("#110", "#112", "2.2", IconResourceID = 400)] // Visual Studio のヘルプ/バージョン情報に表示される情報です。
     [Guid(PackageGuidString)]
     [ProvideMenuResource("Menus.ctmenu", 1)]
     [ProvideOptionPage(typeof(GeneralOptionPage), PackageName, "General", 100, 101, true)]
     [ProvideProfile(typeof(GeneralOptionPage), PackageName, "General", 110, 110, true)]
-    public sealed class CaseConverterPackage : Package
+    public sealed class CaseConverterPackage : AsyncPackage
     {
         /// <summary>
         /// パッケージのIDです。
@@ -35,13 +37,20 @@ namespace CaseConverter
             return (GeneralOption)GetDialogPage(typeof(GeneralOptionPage)).AutomationObject;
         }
 
-        /// <summary>
-        /// パッケージを初期化します。
-        /// </summary>
-        protected override void Initialize()
+        protected override Task InitializeAsync(CancellationToken cancellationToken, IProgress<ServiceProgressData> progress)
         {
-            base.Initialize();
             ConvertCaseCommand.Initialize(this);
+            return base.InitializeAsync(cancellationToken, progress);
+
         }
+
+        ///// <summary>
+        ///// パッケージを初期化します。
+        ///// </summary>
+        //protected override void Initialize()
+        //{
+        //    base.Initialize();
+        //    ConvertCaseCommand.Initialize(this);
+        //}
     }
 }
