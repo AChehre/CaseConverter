@@ -46,6 +46,7 @@ namespace Test.CaseConverter.Converters
                 Assert.AreEqual(expected, StringCaseConverter.GetCasePattern(source));
 
             assert(StringCasePattern.CamelCase, "hogeFugaPiyo");
+            assert(StringCasePattern.SentenceCase, "hoge Fuga Piyo");
             assert(StringCasePattern.PascalCase, "HogeFugaPiyo");
             assert(StringCasePattern.SnakeCase, "hoge_fuga_piyo");
             assert(StringCasePattern.PascalSnakeCase, "Hoge_Fuga_Piyo");
@@ -83,6 +84,7 @@ namespace Test.CaseConverter.Converters
             Action<string[], string> assert = (expected, source) =>
                 CollectionAssert.AreEquivalent(expected, StringCaseConverter.GetWords(source).ToArray());
 
+            assert(new[] { "Hoge", "Fuga", "Piyo" }, "Hoge Fuga Piyo");
             assert(new[] { "Hoge", "Fuga", "Piyo" }, "HogeFugaPiyo");
             assert(new[] { "hoge", "Fuga", "Piyo" }, "hogeFugaPiyo");
             assert(new[] { "HOGE", "Fuga", "Piyo" }, "HOGEFugaPiyo");

@@ -8,7 +8,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Test.CaseConverter</RootNamespace>
     <AssemblyName>Test.CaseConverter</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -16,6 +16,7 @@
     <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
     <IsCodedUITest>False</IsCodedUITest>
     <TestProjectType>UnitTest</TestProjectType>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -35,7 +36,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <SignAssembly>true</SignAssembly>
+    <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
     <AssemblyOriginatorKeyFile>Key.snk</AssemblyOriginatorKeyFile>
@@ -58,6 +59,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Converters\SentenceCaseConverterTest.cs" />
     <Compile Include="Converters\CaseConverterTestBase.cs" />
     <Compile Include="Converters\StringCaseConverterTest.cs" />
     <Compile Include="Converters\CamelCaseConverterTest.cs" />
@@ -70,13 +72,13 @@
     <Compile Include="Utils\StringUtilTest.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\CaseConverter\CaseConverter.csproj">
-      <Project>{664e8280-457a-4177-87e9-96b0dce7bec1}</Project>
-      <Name>CaseConverter</Name>
-    </ProjectReference>
+    <None Include="Key.snk" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Key.snk" />
+    <ProjectReference Include="..\..\src\CaseConverter2022\CaseConverter2022.csproj">
+      <Project>{ed7f75ab-9c37-425b-96f1-4f7e6e9b5c0b}</Project>
+      <Name>CaseConverter2022</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

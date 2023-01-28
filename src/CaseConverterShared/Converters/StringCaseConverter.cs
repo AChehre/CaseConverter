@@ -21,7 +21,8 @@ namespace CaseConverter.Converters
                 [StringCasePattern.SnakeCase] = new SnakeCaseConverter(),
                 [StringCasePattern.PascalSnakeCase] = new PascalSnakeCaseConverter(),
                 [StringCasePattern.ScreamingSnakeCase] = new ScreamingSnakeCaseConverter(),
-                [StringCasePattern.KebabCase] = new KebabCaseConverter()
+                [StringCasePattern.KebabCase] = new KebabCaseConverter(),
+                [StringCasePattern.SentenceCase] = new SentenceCaseConverter()
             };
 
         /// <summary>
@@ -58,14 +59,18 @@ namespace CaseConverter.Converters
         /// </summary>
         /// <param name="input">判定する文字列</param>
         /// <returns>文字列のパターン</returns>
-        internal static StringCasePattern GetCasePattern(string input)
+        public static StringCasePattern GetCasePattern(string input)
         {
             if (string.IsNullOrEmpty(input))
             {
                 return StringCasePattern.CamelCase;
             }
 
-            if (input.Contains('_'))
+            if (input.Contains(' '))
+            {
+                return StringCasePattern.SentenceCase;
+            }
+            else if (input.Contains('_'))
             {
                 if (input.Length == 1)
                 {
@@ -101,7 +106,7 @@ namespace CaseConverter.Converters
         /// 空白や記号、小文字と大文字の境を単語の境界とします。
         /// 行末でない場所に大文字が連続する場合は、最後の1文字を除いて単語と認識します。
         /// </remarks>
-        internal static IEnumerable<string> GetWords(string input)
+        public static IEnumerable<string> GetWords(string input)
         {
             if (string.IsNullOrWhiteSpace(input))
             {
