@@ -33,6 +33,10 @@
         /// <summary>
         /// ケバブケースです。
         /// </summary>
-        KebabCase
+        KebabCase,
+        /// <summary>
+        /// First world starts with capital, all other in lower case
+        /// </summary>
+        SentenceCase
     }
 }

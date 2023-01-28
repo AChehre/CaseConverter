@@ -15,6 +15,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Converters\CamelCaseConverter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Converters\ICaseConverter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Converters\KebabCaseConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\SentenceCaseConverter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Converters\PascalCaseConverter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Converters\PascalSnakeCaseConverter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Converters\ScreamingSnakeCaseConverter.cs" />
